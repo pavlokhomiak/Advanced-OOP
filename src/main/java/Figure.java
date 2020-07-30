@@ -4,9 +4,9 @@ public abstract class Figure {
     private String figureType;
     private String color;
     private double square;
-    DecimalFormat df = new DecimalFormat("####.#");
+    public static final DecimalFormat FORMATTER = new DecimalFormat("####.#");
 
-    Figure(String figureType, String color) {
+    public Figure(String figureType, String color) {
         this.figureType = figureType;
         this.color = color;
     }

@@ -5,7 +5,7 @@ public enum FigureTypes {
     TRAPEZOID("Trapezoid"),
     TRIANGLE("Triangle");
 
-    String figure;
+    private String figure;
 
     FigureTypes(String figure) {
         this.figure = figure;

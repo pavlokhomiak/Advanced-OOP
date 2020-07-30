@@ -3,7 +3,7 @@ public class Trapezoid extends Figure {
     private double sideB;
     private double height;
 
-    Trapezoid(String figureType, String colour, double sideA, double sideB, double height) {
+    public Trapezoid(String figureType, String colour, double sideA, double sideB, double height) {
         super(figureType, colour);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -16,14 +16,14 @@ public class Trapezoid extends Figure {
     }
 
     public void calculateSquare() {
-        super.setSquare((sideA + sideB)/2 * height);
+        super.setSquare((sideA + sideB) / 2 * height);
     }
 
     @Override
     public String toString() {
         return "Фігура: " + this.getClass().getSimpleName()
-                + ", площадь: " + df.format(getSquare())
-                + " кв. ед., высота: " + df.format(height)
+                + ", площадь: " + FORMATTER.format(getSquare())
+                + " кв. ед., высота: " + FORMATTER.format(height)
                 + " ед., цвет: " + getColor();
     }
 }

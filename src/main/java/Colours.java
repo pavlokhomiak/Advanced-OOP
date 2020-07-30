@@ -5,9 +5,13 @@ public enum Colours {
     YELLOW("Yellow"),
     WHITE("White");
 
-    String colour;
+    private String colour;
 
     Colours(String colour) {
         this.colour = colour;
+    }
+
+    public String getColour() {
+        return colour;
     }
 }

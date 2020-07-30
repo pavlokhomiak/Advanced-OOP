@@ -4,22 +4,22 @@ public class Randomizer {
     private static final int MAX_NUMBER_OF_FIGURES = 30;
     private static final int MAX_VALUE = 10;
 
-    public String choseFigure() {
+    private String choseFigure() {
         FigureTypes[] figureTypes = FigureTypes.values();
-        return figureTypes[(int) (Math.random()*NUMBER_OF_FIGURES)].figure;
+        return figureTypes[(int) (Math.random() * NUMBER_OF_FIGURES)].figure;
     }
 
-    public String choseColour() {
+    private String choseColour() {
         Colours[] colours = Colours.values();
-        return colours[(int) (Math.random()*NUMBER_OF_COLOURS)].colour;
+        return colours[(int) (Math.random() * NUMBER_OF_COLOURS)].getColour();
     }
 
-    public double createValue() {
-        return Math.random()*MAX_VALUE + 1;
+    private double createValue() {
+        return Math.random() * MAX_VALUE + 1;
     }
 
     public Figure[] createFigureArray() {
-        Figure[] figures = new Figure[(int) (Math.random()*MAX_NUMBER_OF_FIGURES + 1)];
+        Figure[] figures = new Figure[(int) (Math.random() * MAX_NUMBER_OF_FIGURES + 1)];
         for (int i = 0; i < figures.length; i++) {
             switch (choseFigure()) {
                 case ("Circle"):

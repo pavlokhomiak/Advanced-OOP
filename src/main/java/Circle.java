@@ -1,7 +1,7 @@
 public class Circle extends Figure {
     private double radius;
 
-    Circle(String figureType, String colour, double radius) {
+    public Circle(String figureType, String colour, double radius) {
         super(figureType, colour);
         this.radius = radius;
     }
@@ -18,8 +18,8 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "Фігура: " + this.getClass().getSimpleName()
-                + ", площадь: " + df.format(getSquare())
-                + " кв. ед., радиус: " + df.format(radius)
+                + ", площадь: " + FORMATTER.format(getSquare())
+                + " кв. ед., радиус: " + FORMATTER.format(radius)
                 + " ед., цвет: " + getColor();
     }
 }

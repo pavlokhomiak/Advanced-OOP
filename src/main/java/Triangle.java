@@ -3,7 +3,7 @@ public class Triangle extends Figure {
     private double sideB;
     private double hypotenuse;
 
-    Triangle(String figureType, String colour, double sideA, double sideB) {
+    public Triangle(String figureType, String colour, double sideA, double sideB) {
         super(figureType, colour);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -22,8 +22,8 @@ public class Triangle extends Figure {
     @Override
     public String toString() {
         return "Фігура: " + this.getClass().getSimpleName()
-                + ", площадь: " + df.format(getSquare())
-                + " кв. ед., гипотенуза: " + df.format(hypotenuse)
+                + ", площадь: " + FORMATTER.format(getSquare())
+                + " кв. ед., гипотенуза: " + FORMATTER.format(hypotenuse)
                 + " ед., цвет: " + getColor();
     }
 }
