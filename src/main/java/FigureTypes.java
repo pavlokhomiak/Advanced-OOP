@@ -10,4 +10,8 @@ public enum FigureTypes {
     FigureTypes(String figure) {
         this.figure = figure;
     }
+
+    public String getFigure() {
+        return figure;
+    }
 }

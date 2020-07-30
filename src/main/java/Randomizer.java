@@ -6,7 +6,7 @@ public class Randomizer {
 
     private String choseFigure() {
         FigureTypes[] figureTypes = FigureTypes.values();
-        return figureTypes[(int) (Math.random() * NUMBER_OF_FIGURES)].figure;
+        return figureTypes[(int) (Math.random() * NUMBER_OF_FIGURES)].getFigure();
     }
 
     private String choseColour() {
@@ -23,16 +23,16 @@ public class Randomizer {
         for (int i = 0; i < figures.length; i++) {
             switch (choseFigure()) {
                 case ("Circle"):
-                    figures[i] = new Circle(FigureTypes.CIRCLE.figure, choseColour(), createValue());
+                    figures[i] = new Circle(FigureTypes.CIRCLE.getFigure(), choseColour(), createValue());
                     break;
                 case ("Square"):
-                    figures[i] = new Square(FigureTypes.SQUARE.figure, choseColour(), createValue());
+                    figures[i] = new Square(FigureTypes.SQUARE.getFigure(), choseColour(), createValue());
                     break;
                 case ("Trapezoid"):
-                    figures[i] = new Trapezoid(FigureTypes.TRAPEZOID.figure, choseColour(), createValue(), createValue(), createValue());
+                    figures[i] = new Trapezoid(FigureTypes.TRAPEZOID.getFigure(), choseColour(), createValue(), createValue(), createValue());
                     break;
                 case ("Triangle"):
-                    figures[i] = new Triangle(FigureTypes.TRIANGLE.figure, choseColour(), createValue(), createValue());
+                    figures[i] = new Triangle(FigureTypes.TRIANGLE.getFigure(), choseColour(), createValue(), createValue());
                     break;
             }
         }
